@@ -3,3 +3,4 @@
 - Init nodejs app
 - Add dependency and dev
 - Add docker for dev
+- Start expres app
