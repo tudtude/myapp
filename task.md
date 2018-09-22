@@ -6,3 +6,4 @@
 - Start expres app
 - Add single /api route
 - Add multiple route for app_modules
+- Add dynamic process for route in util
