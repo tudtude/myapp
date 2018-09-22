@@ -16,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/tudtude/myapp/issues"
   },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fs-extra": "^7.0.0",
+    "mysql2": "^1.6.1",
+    "redis": "^2.8.0",
+    "sequelize": "^4.38.1",
+    "umzug": "^2.1.0"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  },
   "homepage": "https://github.com/tudtude/myapp#readme"
 }
