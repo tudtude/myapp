@@ -7,3 +7,5 @@
 - Add single /api route
 - Add multiple route for app_modules
 - Add dynamic process for route in util
+9/24/18
+- Add dynamic process for method in util
