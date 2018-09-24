@@ -1,9 +1,7 @@
-module.exports = models => {
+const
+    utils = require('../../../back_end/util')
 
-    let methods = {}
-    methods.testauthen = input => {
-        return new Promise( res  => res( 'testauthen') )
-    }
-
+module.exports = tools => {
+    methods = utils.mindex( __dirname ) 
     return methods 
 } 

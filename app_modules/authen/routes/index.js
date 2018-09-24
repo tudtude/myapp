@@ -12,6 +12,12 @@ module.exports = methods => {
             res.send( result )
         })
     })
+
+    router.get('/test2', ( req, res ) => {
+        methods.testauthen2().then( result => {
+            res.send( result )
+        })
+    })
     
     return router
 }

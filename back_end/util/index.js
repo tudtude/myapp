@@ -1,31 +1,13 @@
 const
-    fs = require('fs-extra'),
-    path = require('path')
-
+    fs = require('fs-extra')
+    
 let utils = {}
-
-utils.mroutes = ( mpath, router, methods ) => {
-    let target_path = path.join( process.cwd(), mpath )
-    fs
-        .readdirSync( target_path )
-        .forEach( dir => {
-            if( fs.existsSync(`${ target_path }/${dir}/routes`) ){
-                router.use(`/${dir}`, require(`${ target_path }/${dir}/routes`)( methods ))
-            }
-        })
-}
-
-utils.mmethods = ( mpath ) => {
-    let methods = {}
-    let target_path = path.join( process.cwd(), mpath )
-    fs
-        .readdirSync( target_path )
-        .forEach( dir => {
-            if( fs.existsSync(`${ target_path }/${ dir }/methods`)) {
-                Object.assign( methods, require(`${ target_path }/${ dir }/methods`)())
-            }
-        })
-    return methods
-}
-
+fs
+    .readdirSync( __dirname )
+    .forEach( file => {
+        if(file.match(/\.js$/) !== null && file !== 'index.js'){
+            file = file.replace('.js', '')
+            utils[file] = require(`./${file}`)
+        }
+    })
 module.exports = utils
